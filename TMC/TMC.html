@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMC</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="TMC.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav id="nav" style="color: white" class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a style="color: white" class="navbar-brand" href="TMC.html">TMC</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                style="color: white"
+                class="nav-link active"
+                aria-current="page"
+                href="TMC.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a style="color: white" class="nav-link" href="uploud.php"
+                >Memories</a
+              >
+            </li>
+            <li class="nav-item">
+              <a style="color: white" class="nav-link" href="uploud.php"
+                >Upload</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- heroes -->
+    <div class="heroes">
+      <div class="h1">
+        <h1>Temukan Kenangan di Setiap Langkah.</h1>
+      </div>
+      <div class="para">
+        <p id="fullText">
+          "Tiga tahun telah berlalu, dan selama itu pula kita membangun sesuatu
+          yang jauh lebih dari sekadar pertemanan. Kita memulai dari perkenalan
+          yang canggung, berubah menjadi tawa yang tulus, tangisan yang jujur,
+          dan pertengkaran yang menguatkan. Kita pernah berada di titik
+          terendah, saling salah paham, bahkan sempat berpikir untuk
+          menyerah—namun pada akhirnya, kita selalu menemukan jalan untuk
+          kembali menyatu. Kita bukan hanya berbagi waktu, tetapi juga mimpi,
+          luka, dan harapan. Dalam langkah-langkah kecil yang kita tempuh
+          bersama, tumbuh keberanian, kepercayaan, dan pengertian. Kita belajar
+          bahwa keluarga tak selalu harus sedarah, karena kalian adalah bukti
+          bahwa ikatan hati jauh lebih kuat dari itu. Kini, ketika waktu mulai
+          membawa kita ke arah yang berbeda, biarlah kenangan ini tetap hidup
+          dalam setiap ingatan. Meskipun esok tak lagi kita berjalan beriringan,
+          aku percaya—di dalam hati masing-masing, akan selalu ada tempat untuk
+          cerita kita."
+        </p>
+      </div>
+      <div class="button">
+        <button onclick="toggleText()" class="read-more-btn">Read More!</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- js -->
+<script>
+  function toggleText() {
+    const text = document.getElementById("fullText");
+    const btn = document.querySelector(".read-more-btn");
+
+    // Toggle class
+    text.classList.toggle("expanded");
+
+    // Ubah teks tombol
+    if (text.classList.contains("expanded")) {
+      btn.textContent = "Read Less";
+    } else {
+      btn.textContent = "Read More!";
+    }
+  }
+</script>
